@@ -1,0 +1,21 @@
+html {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0px !important;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}

@@ -1,0 +1,18 @@
+.navbar {
+  padding: 1rem 8rem;
+  background-color: inherit;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-shopping-card {
+  cursor: pointer;
+}
+
+.app-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(1px 1px 1px #222222);
+  filter: drop-shadow(3px 3px 3px var(--surface-500));
+}
