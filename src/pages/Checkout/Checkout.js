@@ -14,6 +14,8 @@ import emailjs from "@emailjs/browser";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
+require("dotenv").config();
+
 const Checkout = () => {
   const [countries] = useState(countriesList);
   const [showMessage, setShowMessage] = useState(false);
@@ -48,14 +50,17 @@ const Checkout = () => {
   } = useForm({ defaultValues });
 
   const sendEmail = (data) => {
-    const { EMAIL_JS_SERVICE_KEY, EMAIL_JS_TEMPLATE_KEY, EMAIL_JS_PUBLIC_KEY } =
-      process.env;
+    const {
+      REACT_APP_EMAIL_JS_SERVICE_KEY,
+      REACT_APP_EMAIL_JS_TEMPLATE_KEY,
+      REACT_APP_EMAIL_JS_PUBLIC_KEY,
+    } = process.env;
     emailjs
       .send(
-        EMAIL_JS_SERVICE_KEY,
-        EMAIL_JS_TEMPLATE_KEY,
+        REACT_APP_EMAIL_JS_SERVICE_KEY,
+        REACT_APP_EMAIL_JS_TEMPLATE_KEY,
         data,
-        EMAIL_JS_PUBLIC_KEY
+        REACT_APP_EMAIL_JS_PUBLIC_KEY
       )
       .then(
         (result) => {
