@@ -21,9 +21,9 @@ jobs:
         npm install
         npm run-script build
       env:
-        EMAIL_JS_SERVICE_KEY: ${{ secrets.EMAIL_JS_SERVICE_KEY }}
-        EMAIL_JS_TEMPLATE_KEY: ${{ secrets.EMAIL_JS_TEMPLATE_KEY }}
-        EMAIL_JS_PUBLIC_KEY: ${{ secrets.EMAIL_JS_PUBLIC_KEY }}
+        REACT_APP_EMAIL_JS_SERVICE_KEY: ${{ secrets.REACT_APP_EMAIL_JS_SERVICE_KEY }}
+        REACT_APP_EMAIL_JS_TEMPLATE_KEY: ${{ secrets.REACT_APP_EMAIL_JS_TEMPLATE_KEY }}
+        REACT_APP_EMAIL_JS_PUBLIC_KEY: ${{ secrets.REACT_APP_EMAIL_JS_PUBLIC_KEY }}
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
